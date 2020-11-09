@@ -1,0 +1,39 @@
+// footer
+#map {
+    width: 400px;
+    max-width: 300px;
+    height: 150px;
+}
+.footer {
+    min-height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: #000000;
+    color: #ffffff;
+
+    div {
+        margin: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    a {
+        color: #ffffff;
+    }
+
+    &-left {
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                padding: 10px 0;
+            }
+        }
+    }
+}

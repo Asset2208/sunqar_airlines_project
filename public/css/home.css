@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css2?family=Work+Sans&display=swap);@import url(https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap);a {
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+}
+
+h2 {
+  font-size: 30px;
+  position: relative;
+  right: 10px;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 150px auto;
+}
+
+.container-fluid {
+  margin-top: 40px;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+.full-bg {
+  width: 100%;
+  padding-top: 150px;
+  min-height: calc(100vh - 100px);
+  background: linear-gradient(180deg, #418ad4 0, #72cfec 100%);
+}
+
+.full-bg h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.full-bg p {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 0;
+  letter-spacing: 5px;
+  color: #ffffff;
+}
+
+.full-bg .switch-tabs {
+  display: flex;
+  margin-top: 20px;
+}
+
+.full-bg .switch-tabs div {
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 20px;
+  color: #eeeeee;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.full-bg .switch-tabs .active {
+  border-bottom: 2px solid #ffffff;
+}
+
+.search-ticket form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-ticket input {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #000000;
+  padding: 10px 10px 5px 10px;
+}
+
+.search-ticket input::-moz-placeholder {
+  color: #888787;
+}
+
+.search-ticket input:-ms-input-placeholder {
+  color: #888787;
+}
+
+.search-ticket input::placeholder {
+  color: #888787;
+}
+
+.search-ticket button {
+  background: #ffffff;
+  cursor: pointer;
+  color: #353535;
+  box-shadow: 0px 0px 3px 0px rgba(170, 170, 170, 0.75);
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.search-ticket .search-input-item {
+  border-radius: 4px;
+  padding-bottom: 5px;
+  background: #f1f1f1;
+  margin: 5px 20px 5px 5px;
+}
+
+.search-ticket .submit {
+  margin: 5px 20px 5px 5px;
+}
+
+.flights {
+  margin: 0 auto;
+}
+
+.flights h2 {
+  font-size: 30px;
+  position: relative;
+  right: 10px;
+}
+
+.flights a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000000;
+}
+
+.flights-header {
+  margin-top: 30px;
+}
+
+.flights-popular {
+  margin-top: 40px;
+}
+
+.flights-item {
+  border: 1px solid #eeeeee;
+  background: #eeeeee;
+  padding: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.flights-item:hover {
+  background: #fcfcfc;
+}
+
+.flights .price {
+  color: #808080;
+}
+
+.news h2 {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.news-field div {
+  padding: 20px;
+  margin: 10px;
+  background: #2f5fb8;
+}
+
+.news-field p {
+  padding: 10px 0;
+  color: #ffffff;
+}
+
+.news-field .header-text {
+  font-size: 25px;
+  color: #eeeeee;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.main-questions {
+  text-align: justify;
+  padding: 20px 20px 60px 20px;
+  background: #253e81;
+  margin-top: 50px;
+}
+
+.main-questions img {
+  max-width: 100%;
+  padding: 10px;
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.main-questions p {
+  font-family: "Montserrat Alternates", sans-serif;
+  padding: 10px;
+  background: #f1f1f1;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+.sub-info {
+  background: #1a1a1a;
+  padding: 10px 0 60px 0;
+}
+
+.sub-info-cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sub-info h2 {
+  right: 0;
+  color: #ebebeb;
+}
+
+.sub-info .text-header {
+  text-align: center;
+  padding: 10px 30px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 70px auto;
+}
+

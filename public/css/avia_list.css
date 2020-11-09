@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css2?family=Jost&display=swap);.avia-list {
+  display: flex;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  padding-top: 150px;
+}
+
+.avia-list .container {
+  width: 100%;
+  max-width: 1250px;
+  box-sizing: border-box;
+  margin: 40px auto;
+}
+
+.avia-list p {
+  font-family: "Jost", sans-serif;
+  color: #ffffff;
+}
+
+.avia-list-header {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 0px 15px 0px rgba(180, 180, 180, 0.75);
+  padding: 40px;
+  border-radius: 4px;
+  justify-content: space-around;
+  display: flex;
+}
+
+.avia-list .subtitle {
+  font-size: 20px;
+}
+
+.avia-list .from,
+.avia-list .to {
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+.avia-list .to {
+  color: #ffffff;
+}
+
+.avia-list-result {
+  max-width: 1250px;
+  padding: 0 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: "Jost", sans-serif;
+}
+
+.avia-list-result p,
+.avia-list-result span {
+  font-family: "Jost", sans-serif;
+}
+
+.avia-list-result .flight {
+  padding: 20px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 0px 15px 0px rgba(180, 180, 180, 0.75);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 40px 0;
+}
+
+.avia-list-result .flight-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.avia-list-result .flight-header p {
+  font-size: 25px;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  padding: 5px;
+}
+
+.avia-list-result .flight-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.avia-list-result .flight-price,
+.avia-list-result .flight-detail {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.avia-list-result .flight-detail {
+  float: right;
+  margin-top: 20px;
+  padding: 5px 20px;
+  border-radius: 4px;
+  background: #ffffff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.avia-list-result .flight-detail:hover {
+  transition: 0.3s;
+  background: #285e28;
+  color: #ffffff;
+}
+

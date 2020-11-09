@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.contentblock .left-menu .title {
+    color: #0086af;
+    margin: 0;
+    background: transparent;
+    border: 0;
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.contentblock .left-menu .title:hover {
+    color: #1f5da3;
+    background: transparent;
+}
+
+.contentblock .left-menu .support-block {
+    width: 100%;
+    min-height: 56px;
+    display: block;
+    box-shadow: inset 0px -1px 0px #E6E6E6;
+    padding: 16px 0 0 0;
+}
+
+.contentblock .left-menu .support-block img {
+    margin: 0 16px 0 0;
+}
+
+.contentblock .left-menu .support-block a,
+.contentblock .left-menu .support-block a:active {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    color: #0086af;
+}
+
+
+.contentblock .left-menu .support-block p {
+    padding: 0 0 15px 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #828282;
+    margin: 0;
+}
+
+.contentblock .left-menu .social-content {
+    margin: 32px 0;
+}
+
+.contentblock .left-menu .social-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    color: #001E62;
+    margin: 0 0 12px 0;
+}
+
+.contentblock .left-menu .social-content .youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 0 0 32px 0;
+}
+
+.contentblock .left-menu .social-content .youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contentblock .left-menu .social-content {
+    margin: 32px 0;
+}
+
+.contentblock .left-menu .social-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    color: #001E62;
+    margin: 0 0 12px 0;
+}
+
+.contentblock .left-menu .social-content .youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 0 0 32px 0;
+}
+
+.contentblock .left-menu .social-content .youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contentblock .left-menu .social-content a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 12px 0 0;
+}
+
+.contentblock .left-menu .social-content a.fb {
+    // background: url('/img/information/Facebook.png');
+    background-size: contain;
+}
+
+.contentblock .left-menu .social-content a.insta {
+    // background: url('/img/information/Instagram.png');
+    background-size: contain;
+}
+
+
+.contentblock .rightcontent {
+    padding: 0 15px 0 85px;
+}
+
+.contentblock .rightcontent img {
+    width: 100%;
+}
+
+.contentblock .rightcontent .title {
+    color: #1f5da3;
+    font-weight: 700;
+    margin-left: 5px;
+    margin-bottom: 28px;
+}
+
+.contentblock .rightcontent .faqblock {
+    padding: 40px 30px 40px 30px;
+    border-radius: 2px;
+    border: 1px solid #E6E6E6;
+    width: 100%;
+    margin: 8px 0 8px 0;
+}
+
+.contentblock .rightcontent .faqblock a {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: normal;
+    color: #0086af;
+    margin: 0;
+}
+
+.contentblock .rightcontent .faqblock a.arrowlink::after {
+    float: right;
+    margin: 9px 0 0 10px;
+    vertical-align: 0;
+}
+
+
+@media(max-width: 992px) {
+    .contentblock .rightcontent {
+        padding: 0 15px 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contentblock {
+        padding: 0px 15px 40px 15px !important;
+    }
+
+    .contentblock .rightcontent ,
+    .contentblock .rightcontent {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contentblock .rightcontent table tr td {
+        padding: 5px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .rightcontent {
+        padding: 32px 15px 0 15px !important;
+    }
+}
