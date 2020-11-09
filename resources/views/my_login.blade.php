@@ -23,7 +23,7 @@
             <h2 class="form__title">Вход</h2>
             <input type="email" placeholder="Email" class="input" />
             <input type="password" placeholder="Password" class="input" />
-            <a href="#" class="link">Forgot your password?</a>
+            <a href="#" class="link">Забыли пароль?</a>
             <button class="btn">Войти в аккаунт</button>
         </form>
     </div>

@@ -19323,6 +19323,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -19377,6 +19388,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/admin.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/admin.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/avia_list.scss":
 /*!***************************************!*\
   !*** ./resources/sass/avia_list.scss ***!
@@ -19399,10 +19421,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/sass/footer.scss":
-/*!************************************!*\
-  !*** ./resources/sass/footer.scss ***!
-  \************************************/
+/***/ "./resources/sass/dashboard.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/dashboard.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -19455,21 +19477,23 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/home.scss ./resources/sass/footer.scss ./resources/sass/contacts.scss ./resources/sass/information.scss ./resources/sass/avia_list.scss ./resources/sass/about.scss ./resources/sass/sign_in.scss ./resources/sass/header.scss ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/header.scss ./resources/sass/avia_list.scss ./resources/sass/about.scss ./resources/sass/contacts.scss ./resources/sass/home.scss ./resources/sass/admin.scss ./resources/sass/dashboard.scss ./resources/sass/information.scss ./resources/sass/sign_in.scss ./resources/css/app.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\sass\home.scss */"./resources/sass/home.scss");
-__webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\sass\footer.scss */"./resources/sass/footer.scss");
-__webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\sass\contacts.scss */"./resources/sass/contacts.scss");
-__webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\sass\information.scss */"./resources/sass/information.scss");
-__webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\sass\avia_list.scss */"./resources/sass/avia_list.scss");
-__webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\sass\about.scss */"./resources/sass/about.scss");
-__webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\sass\sign_in.scss */"./resources/sass/sign_in.scss");
-module.exports = __webpack_require__(/*! C:\Users\Мадияр\Desktop\laravel\sunqar_avialines\resources\sass\header.scss */"./resources/sass/header.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\header.scss */"./resources/sass/header.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\avia_list.scss */"./resources/sass/avia_list.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\about.scss */"./resources/sass/about.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\contacts.scss */"./resources/sass/contacts.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\home.scss */"./resources/sass/home.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\dashboard.scss */"./resources/sass/dashboard.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\information.scss */"./resources/sass/information.scss");
+__webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\sass\sign_in.scss */"./resources/sass/sign_in.scss");
+module.exports = __webpack_require__(/*! C:\Users\Мадияр\Desktop\sunqar_airlines_project\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })

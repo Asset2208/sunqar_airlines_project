@@ -44,3 +44,7 @@ Route::get('/contacts/', function() {
 Route::get('/avia/list/', function() {
     return view('avia_list');
 });
+
+Route::get('/admin', function() {
+    return view('admin.admin');
+});

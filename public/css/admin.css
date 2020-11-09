@@ -1,0 +1,10 @@
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 150px auto;
+}
+
+.admin {
+  min-height: 100vh;
+}
+

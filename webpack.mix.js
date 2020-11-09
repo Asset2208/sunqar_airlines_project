@@ -12,6 +12,15 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/header.scss', 'public/css')
+    .sass('resources/sass/avia_list.scss', 'public/css')
+    .sass('resources/sass/about.scss', 'public/css')
+    .sass('resources/sass/contacts.scss', 'public/css')
+    .sass('resources/sass/home.scss', 'public/css')
+    .sass('resources/sass/admin.scss', 'public/css')
+    .sass('resources/sass/dashboard.scss', 'public/css')
+    .sass('resources/sass/information.scss', 'public/css')
+    .sass('resources/sass/sign_in.scss', 'public/css')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
