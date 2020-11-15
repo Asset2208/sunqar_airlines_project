@@ -50,6 +50,9 @@
                 <div class="header-text">
                     <h1>Поиск авиабилетов</h1>
                     <p>Бронируйте билеты быстро и выгодно</p>
+                    <p>
+                        <a href="/generate-pdf" style="color: #fffff;">Скачать билет</a>
+                    </p>
                 </div>
 
                 <div class="switch-tabs">

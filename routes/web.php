@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PDFController;
+use App\Http\Livewire\Posts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,3 +50,7 @@ Route::get('/avia/list/', function() {
 Route::get('/admin', function() {
     return view('admin.admin');
 });
+
+Route::get('post', Posts::class);
+
+Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
