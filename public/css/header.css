@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;
 
-400&display=swap);.header {
+400&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway&display=swap);.header {
   height: 100px;
   width: 100%;
   position: fixed;
-  background: #232b33;
+  background: #ffffff;
   left: 0;
   top: 0;
   padding: 20px;
@@ -17,10 +17,14 @@
 
 .header a {
   text-decoration: none;
-  background: #3674b3;
   padding: 10px;
-  border-radius: 4px;
-  color: #ffffff;
+  color: #000000;
   font-family: "Source Sans Pro", sans-serif;
+  font-family: "Raleway", sans-serif;
+  transition: 0.3s;
+}
+
+.navbar a {
+  margin-right: 10px;
 }
 

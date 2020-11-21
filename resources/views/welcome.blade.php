@@ -30,8 +30,13 @@
 <body class="antialiased">
         @if (Route::has('login'))
         <div class="header hidden fixed top-0 right-0 px-6 py-4 sm:block">
-
             @auth
+            <div class="navbar">
+                <a href="/">Главная</a>
+                <a href="/information">Информация</a>
+                <a href="/about">О нас</a>
+                <a href="/contacts">Контакты</a>
+            </div>
             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Профиль</a>
             @else
             <div class="auth">

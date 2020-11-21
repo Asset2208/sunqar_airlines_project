@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PDFController;
 use App\Http\Livewire\Posts;
 use Illuminate\Support\Facades\Route;
@@ -54,3 +55,5 @@ Route::get('/admin', function() {
 Route::get('post', Posts::class);
 
 Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
+
+Route::get('/madiyar', [AdminController::class, 'index'])->name('madiyar.index');

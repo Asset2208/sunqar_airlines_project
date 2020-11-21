@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Post;
+use App\Models\Team;
 use Livewire\Component;
 
 class Posts extends Component
@@ -17,6 +18,14 @@ class Posts extends Component
      */
     public function render()
     {
+        $team = Team::find(4);
+        $user = auth()->user();
+
+        if(!$user->hasTeamPermission($team, 'show')) {
+            abort(401, 'У вас нет прав');
+        }
+
+
         $this->posts = Post::all();
         return view('livewire.posts');
     }
