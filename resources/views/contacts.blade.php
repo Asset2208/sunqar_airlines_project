@@ -13,7 +13,8 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
         <div class="col-md-8 offset-2 rightcontent">
             <h1 class="title">Напишите нам</h1>
             <div class="emailusform">
-                <form action="#" id="submitForm" method="post">
+                <form action="/contacts" id="submitForm" method="post">
+                {{csrf_field()}}
                     <div class="arrowlink formrow">
                         <select id="type" name="type" class="form-control" required="required">
                             <option disabled="disabled" selected="selected" value="">Выбрать</option>
@@ -40,7 +41,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
                             <label>Номер авиабилета/бронирования</label>
                         </div>
                         <div class="halfright formrow" >
-                            <input type="date" placeholder="Туда" class="form-control">                                
+                            <input type="date" placeholder="Туда" class="form-control" name="date">                                
                             <span class="icon-from i-calendar"></span>
                             <span class="bar"></span>
                             <label>Дата вылета</label>

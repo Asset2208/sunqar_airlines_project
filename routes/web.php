@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\ContactsController;
 use App\Http\Livewire\Posts;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +44,8 @@ Route::get('/mylogin/', function() {
 Route::get('/contacts/', function() {
     return view('contacts');
 });
+
+Route::post('/contacts', [ContactsController::class, 'index'])->name('contact.index');
 
 Route::get('/avia/list/', function() {
     return view('avia_list');
