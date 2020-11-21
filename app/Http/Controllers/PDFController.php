@@ -14,6 +14,7 @@ class PDFController extends Controller
      */
     public function generatePDF()
     {
+        
         $data = [
             'title' => 'Sunqar avialines',
             'date' => date('m/d/Y')

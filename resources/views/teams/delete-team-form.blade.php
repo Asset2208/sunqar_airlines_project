@@ -1,20 +1,20 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Delete Team') }}
+        {{ __('Удалить группу') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Permanently delete this team.') }}
+        {{ __('') }}
     </x-slot>
 
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600">
-            {{ __('Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain.') }}
+            {{ __('') }}
         </div>
 
         <div class="mt-5">
             <x-jet-danger-button wire:click="$toggle('confirmingTeamDeletion')" wire:loading.attr="disabled">
-                {{ __('Delete Team') }}
+                {{ __('Удалить группу') }}
             </x-jet-danger-button>
         </div>
 

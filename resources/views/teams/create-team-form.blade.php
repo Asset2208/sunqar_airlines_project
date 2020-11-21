@@ -1,15 +1,15 @@
 <x-jet-form-section submit="createTeam">
     <x-slot name="title">
-        {{ __('Team Details') }}
+        {{ __('Подробнее') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Create a new team to collaborate with others on projects.') }}
+        {{ __('Описание') }}
     </x-slot>
 
     <x-slot name="form">
         <div class="col-span-6">
-            <x-jet-label value="{{ __('Team Owner') }}" />
+            <x-jet-label value="{{ __('Администратор группы') }}" />
 
             <div class="flex items-center mt-2">
                 <img class="w-12 h-12 rounded-full object-cover" src="{{ $this->user->profile_photo_url }}" alt="{{ $this->user->name }}">
