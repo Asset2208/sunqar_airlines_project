@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Livewire\Posts;
+use App\Http\Livewire\Contacts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,6 +57,8 @@ Route::get('/admin', function() {
 });
 
 Route::get('post', Posts::class);
+
+Route::get('contact-request', Contacts::class);
 
 Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 
