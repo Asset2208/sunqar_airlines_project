@@ -2,13 +2,14 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Country;
 use App\Models\Post;
 use App\Models\Team;
 use Livewire\Component;
 
-class Posts extends Component
+class Countries extends Component
 {
-    public $posts, $title, $body, $post_id;
+    public $countries, $name, $cimg, $country_id;
     public $updateMode = false;
     public $isOpen = 0;
 
@@ -27,8 +28,8 @@ class Posts extends Component
         }
 
 
-        $this->posts = Post::all();
-        return view('livewire.posts');
+        $this->countries = Country::all();
+        return view('livewire.countries');
     }
   
     /**
@@ -68,9 +69,9 @@ class Posts extends Component
      * @var array
      */
     private function resetInputFields(){
-        $this->title = '';
-        $this->body = '';
-        $this->post_id = '';
+        $this->name = '';
+        $this->cimg = '';
+        $this->country_id = '';
     }
      
     /**
@@ -81,17 +82,17 @@ class Posts extends Component
     public function store()
     {
         $this->validate([
-            'title' => 'required',
-            'body' => 'required',
+            'name' => 'required',
+            'cimg' => 'required',
         ]);
    
-        Post::updateOrCreate(['id' => $this->post_id], [
-            'title' => $this->title,
-            'body' => $this->body
+        Country::updateOrCreate(['id' => $this->country_id], [
+            'name' => $this->name,
+            'cimg' => $this->cimg
         ]);
   
         session()->flash('message', 
-            $this->post_id ? 'Post Updated Successfully.' : 'Post Created Successfully.');
+            $this->country_id ? 'Страна успешно обновлена' : 'Страна успешно добавлена.');
   
         $this->closeModal();
         $this->resetInputFields();
@@ -103,10 +104,10 @@ class Posts extends Component
      */
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
-        $this->post_id = $id;
-        $this->title = $post->title;
-        $this->body = $post->body;
+        $country = Country::findOrFail($id);
+        $this->country_id = $id;
+        $this->name = $country->name;
+        $this->cimg = $country->cimg;
     
         $this->openModal();
     }
@@ -118,7 +119,7 @@ class Posts extends Component
      */
     public function delete($id)
     {
-        Post::find($id)->delete();
-        session()->flash('message', 'Пост удален успешно.');
+        Country::find($id)->delete();
+        session()->flash('message', 'Страна удалена успешно.');
     }
 }

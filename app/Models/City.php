@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class City extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'type',
+        'country_id',
         'name',
-        'email',
-        'user_id',
-        'ticket',
-        'date',
-        'message',
-        'answer'
+        'short_code',
     ];
+
+    public function country() {
+        return $this->belongsTo(Country::class);
+    }
 }

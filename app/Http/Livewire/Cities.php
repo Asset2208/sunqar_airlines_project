@@ -2,13 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\City;
+use App\Models\Country;
 use App\Models\Post;
 use App\Models\Team;
 use Livewire\Component;
 
-class Posts extends Component
+class Cities extends Component
 {
-    public $posts, $title, $body, $post_id;
+    public $cities, $name, $shortCode, $city_id, $country_id;
+    public $countries;
     public $updateMode = false;
     public $isOpen = 0;
 
@@ -19,16 +22,17 @@ class Posts extends Component
      */
     public function render()
     {
-        $team = Team::find(4);
-        $user = auth()->user();
+        // $team = Team::find(4);
+        // $user = auth()->user();
 
-        if(!$user->hasTeamPermission($team, 'show')) {
-            abort(401, 'У вас нет прав');
-        }
+        // if(!$user->hasTeamPermission($team, 'show')) {
+        //     abort(401, 'У вас нет прав');
+        // }
 
 
-        $this->posts = Post::all();
-        return view('livewire.posts');
+        $this->cities = City::all();
+        $this->countries = Country::all();
+        return view('livewire.cities', [$this->countries]);
     }
   
     /**
@@ -68,9 +72,10 @@ class Posts extends Component
      * @var array
      */
     private function resetInputFields(){
-        $this->title = '';
-        $this->body = '';
-        $this->post_id = '';
+        $this->name = '';
+        $this->shortCode = '';
+        $this->city_id = '';
+        $this->country_id = '';
     }
      
     /**
@@ -80,18 +85,20 @@ class Posts extends Component
      */
     public function store()
     {
-        $this->validate([
-            'title' => 'required',
-            'body' => 'required',
-        ]);
+        // $this->validate([
+        //     'name' => 'required',
+        //     'short_code' => 'required',
+        //     'country_id' => 'required',
+        // ]);
    
-        Post::updateOrCreate(['id' => $this->post_id], [
-            'title' => $this->title,
-            'body' => $this->body
+        City::updateOrCreate(['id' => $this->city_id], [
+            'country_id' => $this->country_id,
+            'name' => $this->name,
+            'short_code' => $this->shortCode,
         ]);
   
         session()->flash('message', 
-            $this->post_id ? 'Post Updated Successfully.' : 'Post Created Successfully.');
+            $this->country_id ? 'Город успешно обновлен' : 'Город успешно добавлен.');
   
         $this->closeModal();
         $this->resetInputFields();
@@ -103,10 +110,11 @@ class Posts extends Component
      */
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
-        $this->post_id = $id;
-        $this->title = $post->title;
-        $this->body = $post->body;
+        $city = City::findOrFail($id);
+        $this->city_id = $id;
+        $this->country_id = $city->country_id;
+        $this->name = $city->name;
+        $this->shortCode = $city->short_code;
     
         $this->openModal();
     }
@@ -118,7 +126,7 @@ class Posts extends Component
      */
     public function delete($id)
     {
-        Post::find($id)->delete();
-        session()->flash('message', 'Пост удален успешно.');
+        City::find($id)->delete();
+        session()->flash('message', 'Город удален успешно.');
     }
 }

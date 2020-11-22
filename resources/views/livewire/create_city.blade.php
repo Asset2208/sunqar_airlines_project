@@ -13,14 +13,23 @@
         <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div class="">
                 <div class="mb-4">
-                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Имя страны:</label>
-                    <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" placeholder="Название страны" wire:model="name">
+                    <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Город:</label>
+                    <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Название" wire:model="name">
                     @error('name') <span class="text-red-500">{{ $message }}</span>@enderror
                 </div>
                 <div class="mb-4">
-                    <label for="cimg" class="block text-gray-700 text-sm font-bold mb-2">Фотография:</label>
-                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cimg" wire:model="cimg" placeholder="Ссылка"></textarea>
-                    @error('cimg') <span class="text-red-500">{{ $message }}</span>@enderror
+                    <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">Шорткод:</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="shortCode" placeholder="Шорткод" />
+                    @error('short_code') <span class="text-red-500">{{ $message }}</span>@enderror
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Страна:</label>
+                    <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" wire:model="country_id">
+                        @foreach($countries as $country)
+                            <option value="{{ $country->id }}">{{ $country->name }}</option>
+                        @endforeach
+                    </select>
+                    @error('shor_code') <span class="text-red-500">{{ $message }}</span>@enderror
                 </div>
           </div>
         </div>

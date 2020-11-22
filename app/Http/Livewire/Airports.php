@@ -2,13 +2,14 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Post;
-use App\Models\Team;
+use App\Models\Airport;
+use App\Models\City;
 use Livewire\Component;
 
-class Posts extends Component
+class Airports extends Component
 {
-    public $posts, $title, $body, $post_id;
+    public $airports, $name, $address, $airport_id, $city_id;
+    public $cities;
     public $updateMode = false;
     public $isOpen = 0;
 
@@ -19,16 +20,17 @@ class Posts extends Component
      */
     public function render()
     {
-        $team = Team::find(4);
-        $user = auth()->user();
+        // $team = Team::find(4);
+        // $user = auth()->user();
 
-        if(!$user->hasTeamPermission($team, 'show')) {
-            abort(401, 'У вас нет прав');
-        }
+        // if(!$user->hasTeamPermission($team, 'show')) {
+        //     abort(401, 'У вас нет прав');
+        // }
 
 
-        $this->posts = Post::all();
-        return view('livewire.posts');
+        $this->airports = Airport::all();
+        $this->cities = City::all();
+        return view('livewire.airports', [$this->cities]);
     }
   
     /**
@@ -68,9 +70,10 @@ class Posts extends Component
      * @var array
      */
     private function resetInputFields(){
-        $this->title = '';
-        $this->body = '';
-        $this->post_id = '';
+        $this->name = '';
+        $this->shortCode = '';
+        $this->airport_id = '';
+        $this->city_id = '';
     }
      
     /**
@@ -80,18 +83,20 @@ class Posts extends Component
      */
     public function store()
     {
-        $this->validate([
-            'title' => 'required',
-            'body' => 'required',
-        ]);
+        // $this->validate([
+        //     'name' => 'required',
+        //     'short_code' => 'required',
+        //     'country_id' => 'required',
+        // ]);
    
-        Post::updateOrCreate(['id' => $this->post_id], [
-            'title' => $this->title,
-            'body' => $this->body
+        Airport::updateOrCreate(['id' => $this->airport_id], [
+            'city_id' => $this->city_id,
+            'name' => $this->name,
+            'address' => $this->address,
         ]);
   
         session()->flash('message', 
-            $this->post_id ? 'Post Updated Successfully.' : 'Post Created Successfully.');
+            $this->airport_id ? 'Аэропорт успешно обновлен' : 'Аэропорт успешно добавлен.');
   
         $this->closeModal();
         $this->resetInputFields();
@@ -103,10 +108,11 @@ class Posts extends Component
      */
     public function edit($id)
     {
-        $post = Post::findOrFail($id);
-        $this->post_id = $id;
-        $this->title = $post->title;
-        $this->body = $post->body;
+        $airport = Airport::findOrFail($id);
+        $this->airport_id = $id;
+        $this->city_id = $airport->city_id;
+        $this->name = $airport->name;
+        $this->address = $airport->address;
     
         $this->openModal();
     }
@@ -118,7 +124,8 @@ class Posts extends Component
      */
     public function delete($id)
     {
-        Post::find($id)->delete();
-        session()->flash('message', 'Пост удален успешно.');
+        Airport::find($id)->delete();
+        session()->flash('message', 'Город удален успешно.');
     }
 }
+

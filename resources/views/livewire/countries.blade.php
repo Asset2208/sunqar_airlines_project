@@ -1,6 +1,6 @@
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Контактные формы
+        Страны
     </h2>
 </x-slot>
 <div class="py-12">
@@ -15,7 +15,7 @@
                   </div>
                 </div>
             @endif
-            <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Добавить публикацию</button>
+            <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Добавить страну</button>
             @if($isOpen)
                 @include('livewire.create_contacts')
             @endif
@@ -23,24 +23,22 @@
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 w-20">#</th>
-                        <th class="px-4 py-2">Тип запроса</th>
-                        <th class="px-4 py-2">Имя</th>
-                        <th class="px-4 py-2">Email</th>
-                        <th class="px-4 py-2">Дата</th>
+                        <th class="px-4 py-2">Название</th>
+                        <th class="px-4 py-2">Фотография</th>
                         <th class="px-4 py-2">Действия</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($contacts as $contact)
+                    @foreach($countries as $country)
                     <tr>
-                        <td class="border px-4 py-2">{{ $contact->id }}</td>
-                        <td class="border px-4 py-2">{{ $contact->type }}</td>
-                        <td class="border px-4 py-2">{{ $contact->name }}</td>
-                        <td class="border px-4 py-2">{{ $contact->email }}</td>
-                        <td class="border px-4 py-2">{{ $contact->date }}</td>
+                        <td class="border px-4 py-2">{{ $country->id }}</td>
+                        <td class="border px-4 py-2">{{ $country->name }}</td>
+                        <td class="border px-4 py-2" style="display:flex; justify-content: center;">
+                            <img src="{{ $country->cimg }}" alt="{{ $country->name }}" width="100px">
+                        </td>
                         <td class="border px-4 py-2">
-                            <button wire:click="edit({{ $contact->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Редактировать</button> <br>
-                            <button wire:click="delete({{ $contact->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Удалить</button>
+                        <button wire:click="edit({{ $country->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Редактировать</button>
+                            <button wire:click="delete({{ $country->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Удалить</button>
                         </td>
                     </tr>
                     @endforeach
