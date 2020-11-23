@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="faqblock">
-                        <a href="#" class="arrowlink">
+                        <a href="/ticket-purchase" class="arrowlink">
                             Покупка билета (Возврат/перебронирование/ваучер) </a>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="faqblock">
-                        <a href="#" class="arrowlink">
+                        <a href="/additional-services" class="arrowlink">
                             Дополнительные услуги </a>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="faqblock">
-                        <a href="#" class="arrowlink">
+                        <a href="/traveling-with-children" class="arrowlink">
                             Путешествие с детьми </a>
                     </div>
                 </div>

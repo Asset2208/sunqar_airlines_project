@@ -40,6 +40,18 @@ Route::get('/information/', function() {
     return view('information');
 });
 
+Route::get('/additional-services', function() {
+    return view('additional_services');
+});
+
+Route::get('/traveling-with-children', function() {
+    return view('traveling-with-children');
+});
+
+Route::get('/ticket-purchase', function() {
+    return view('ticket-purchase');
+});
+
 Route::get('/myregister/', function() {
     return view('my_register');
 });
