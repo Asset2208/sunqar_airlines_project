@@ -71,7 +71,7 @@ Route::get('/avia/list/', function() {
 });
 
 Route::get('/admin', function() {
-    return view('admin.admin');
+    return view('admin.index');
 });
 
 Route::get('admin/post', Posts::class);
@@ -86,4 +86,4 @@ Route::get('/admin/airports', Airports::class);
 
 Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 
-Route::get('/admin', [AdminController::class, 'index'])->name('madiyar.index');
+// Route::get('/admin', [AdminController::class, 'index'])->name('madiyar.index');

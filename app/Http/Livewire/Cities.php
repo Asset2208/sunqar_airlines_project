@@ -22,12 +22,12 @@ class Cities extends Component
      */
     public function render()
     {
-        // $team = Team::find(4);
-        // $user = auth()->user();
+        $team = Team::find(4);
+        $user = auth()->user();
 
-        // if(!$user->hasTeamPermission($team, 'show')) {
-        //     abort(401, 'У вас нет прав');
-        // }
+        if(!$user->hasTeamPermission($team, 'show')) {
+            abort(401, 'У вас нет прав');
+        }
 
 
         $this->cities = City::all();

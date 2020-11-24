@@ -30,16 +30,16 @@ class Contacts extends Component
         return view('livewire.contacts_admin');
     }
   
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    public function create()
-    {
-        $this->resetInputFields();
-        $this->openModal();
-    }
+    // /**
+    //  * The attributes that are mass assignable.
+    //  *
+    //  * @var array
+    //  */
+    // public function create()
+    // {
+    //     $this->resetInputFields();
+    //     $this->openModal();
+    // }
   
     /**
      * The attributes that are mass assignable.

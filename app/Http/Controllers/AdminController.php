@@ -8,13 +8,13 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index() {
-        $team = Team::find(1);
+        $team = Team::find(4);
         $user = auth()->user();
 
         if(!$user->hasTeamPermission($team, 'show')) {
             abort(401, 'У вас нет прав');
         }
 
-        return "asdsadsad";
+        return "index";
     }
 }

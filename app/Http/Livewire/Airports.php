@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Airport;
 use App\Models\City;
+use App\Models\Team;
 use Livewire\Component;
 
 class Airports extends Component
@@ -20,12 +21,12 @@ class Airports extends Component
      */
     public function render()
     {
-        // $team = Team::find(4);
-        // $user = auth()->user();
+        $team = Team::find(4);
+        $user = auth()->user();
 
-        // if(!$user->hasTeamPermission($team, 'show')) {
-        //     abort(401, 'У вас нет прав');
-        // }
+        if(!$user->hasTeamPermission($team, 'show')) {
+            abort(401, 'У вас нет прав');
+        }
 
 
         $this->airports = Airport::all();
