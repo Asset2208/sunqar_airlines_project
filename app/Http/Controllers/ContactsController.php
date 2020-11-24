@@ -13,6 +13,14 @@ class ContactsController extends Controller
     {
         $user = auth()->user();
 
+        if($request->hasFile('file')){ 
+            $file = $request->file('file');
+
+            $uniqueFileName = uniqid() . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path() . '/uploads', $uniqueFileName);
+    
+        }
+        
         $contact = new Contact;
         $contact->type = $request->type;
         $contact->name = $request->name;
@@ -22,6 +30,8 @@ class ContactsController extends Controller
         $contact->date = $request->date;
         $contact->message = $request->message;
         $contact->save();
+
+        
 
         return redirect('contacts');
     }
