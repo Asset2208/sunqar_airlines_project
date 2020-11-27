@@ -14,13 +14,13 @@
           <div class="">
                 <div class="mb-4">
                     <label for="exampleFormControlInput1" class="block text-gray-700 text-sm font-bold mb-2">Название:</label>
-                    <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Название страны" wire:model="name">
+                    <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput1" placeholder="Название авиалинии" wire:model="name">
                     @error('name') <span class="text-red-500">{{ $message }}</span>@enderror
                 </div>
                 <div class="mb-4">
                     <label for="exampleFormControlInput2" class="block text-gray-700 text-sm font-bold mb-2">URL:</label>
-                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="cimg" placeholder="URL"></textarea>
-                    @error('cimg') <span class="text-red-500">{{ $message }}</span>@enderror
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="exampleFormControlInput2" wire:model="airline_photo" placeholder="URL"></textarea>
+                    @error('airline_photo') <span class="text-red-500">{{ $message }}</span>@enderror
                 </div>
           </div>
         </div>

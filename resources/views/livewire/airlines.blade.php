@@ -17,7 +17,7 @@
             @endif
             <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Добавить страну</button>
             @if($isOpen)
-                @include('livewire.create_country')
+                @include('livewire.create_airline')
             @endif
             <table class="table-fixed w-full">
                 <thead>
@@ -29,16 +29,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($countries as $country)
+                    @foreach($airlines as $airline)
                     <tr>
-                        <td class="border px-4 py-2">{{ $country->id }}</td>
-                        <td class="border px-4 py-2">{{ $country->name }}</td>
+                        <td class="border px-4 py-2">{{ $airline->id }}</td>
+                        <td class="border px-4 py-2">{{ $airline->name }}</td>
                         <td class="border px-4 py-2" style="display:flex; justify-content: center;">
-                            <img src="{{ $country->cimg }}" alt="{{ $country->name }}" width="100px">
+                            <img src="{{ $airline->airline_photo }}" alt="{{ $airline->name }}" width="175px">
                         </td>
                         <td class="border px-4 py-2">
-                        <button wire:click="edit({{ $country->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Редактировать</button>
-                            <button wire:click="delete({{ $country->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Удалить</button>
+                        <button wire:click="edit({{ $airline->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Редактировать</button>
+                            <button wire:click="delete({{ $airline->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Удалить</button>
                         </td>
                     </tr>
                     @endforeach

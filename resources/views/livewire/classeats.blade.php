@@ -1,6 +1,6 @@
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Страны
+        Классы
     </h2>
 </x-slot>
 <div class="py-12">
@@ -15,30 +15,26 @@
                   </div>
                 </div>
             @endif
-            <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Добавить страну</button>
+            <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Добавить тип класса</button>
             @if($isOpen)
-                @include('livewire.create_country')
+                @include('livewire.create_class_seat')
             @endif
             <table class="table-fixed w-full">
                 <thead>
                     <tr class="bg-gray-100">
                         <th class="px-4 py-2 w-20">#</th>
                         <th class="px-4 py-2">Название</th>
-                        <th class="px-4 py-2">Фотография</th>
                         <th class="px-4 py-2">Действия</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($countries as $country)
+                    @foreach($classeats as $classeat)
                     <tr>
-                        <td class="border px-4 py-2">{{ $country->id }}</td>
-                        <td class="border px-4 py-2">{{ $country->name }}</td>
-                        <td class="border px-4 py-2" style="display:flex; justify-content: center;">
-                            <img src="{{ $country->cimg }}" alt="{{ $country->name }}" width="100px">
-                        </td>
+                        <td class="border px-4 py-2">{{ $classeat->id }}</td>
+                        <td class="border px-4 py-2">{{ $classeat->name }}</td>
                         <td class="border px-4 py-2">
-                        <button wire:click="edit({{ $country->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Редактировать</button>
-                            <button wire:click="delete({{ $country->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Удалить</button>
+                        <button wire:click="edit({{ $classeat->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Редактировать</button>
+                            <button wire:click="delete({{ $classeat->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Удалить</button>
                         </td>
                     </tr>
                     @endforeach

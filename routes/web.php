@@ -3,13 +3,19 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ContactsController;
+use App\Http\Livewire\Airlines;
 use App\Http\Livewire\Airports;
 use App\Http\Livewire\Cities;
+use App\Http\Livewire\Classseats;
 use App\Http\Livewire\Posts;
 use App\Http\Livewire\Contacts;
 use App\Http\Livewire\Countries;
+use App\Http\Livewire\Flights;
+use App\Http\Livewire\Tickets;
+use App\Models\Airline;
 use App\Models\City;
 use App\Models\Country;
+use App\Models\Flight;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -74,6 +80,8 @@ Route::get('/admin', function() {
     return view('admin.index');
 });
 
+Route::get('/admin/ticket', Tickets::class);
+
 Route::get('admin/post', Posts::class);
 
 Route::get('admin/country', Countries::class);
@@ -81,6 +89,12 @@ Route::get('admin/country', Countries::class);
 Route::get('contact-request', Contacts::class);
 
 Route::get('/admin/cities', Cities::class);
+
+Route::get('/admin/class-seats', Classseats::class);
+
+Route::get('admin/airline', Airlines::class);
+
+Route::get('/admin/flight', Flights::class);
 
 Route::get('/admin/airports', Airports::class);
 
