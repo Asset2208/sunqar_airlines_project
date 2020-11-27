@@ -13,13 +13,7 @@ class ContactsController extends Controller
     {
         $user = auth()->user();
 
-        if($request->hasFile('file')){ 
-            $file = $request->file('file');
-
-            $uniqueFileName = uniqid() . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path() . '/uploads', $uniqueFileName);
-    
-        }
+        
         
         $contact = new Contact;
         $contact->type = $request->type;
@@ -29,6 +23,13 @@ class ContactsController extends Controller
         $contact->ticket = $request->ticket;
         $contact->date = $request->date;
         $contact->message = $request->message;
+        if($request->hasFile('file')){ 
+            $file = $request->file('file');
+
+            $uniqueFileName = uniqid() . $file->getClientOriginalName();
+            $file->move(public_path() . '/uploads', $uniqueFileName);
+            $contact->filename = $uniqueFileName;
+        }
         $contact->save();
 
         

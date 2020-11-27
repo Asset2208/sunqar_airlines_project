@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Contacts extends Component
 {
-    public $contacts, $type, $name, $email, $user_id, $ticket, $date, $message, $answer, $contacts_id;
+    public $contacts, $type, $name, $email, $user_id, $ticket, $date, $message, $answer, $filename, $contacts_id;
     public $isOpen = 0;
 
     /**
@@ -76,6 +76,7 @@ class Contacts extends Component
         $this->message = '';
         $this->answer = '';
         $this->contacts_id = '';
+        $this->filename = '';
     }
      
     /**
@@ -106,7 +107,8 @@ class Contacts extends Component
             'date' => $this->date,
             'message' => $this->message,
             'answer' => $this->answer,
-            'contacts_id' => $this->contacts_id
+            'contacts_id' => $this->contacts_id,
+            'filename' => $this->filename
         ]);
   
         session()->flash('message', 
@@ -132,6 +134,7 @@ class Contacts extends Component
         $this->date = $contact->date;
         $this->message = $contact->message;
         $this->answer = $contact->answer;
+        $this->filename = $contact->filename;
     
         $this->openModal();
     }
