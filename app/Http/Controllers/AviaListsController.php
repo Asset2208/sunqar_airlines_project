@@ -23,10 +23,10 @@ class AviaListsController extends Controller
         // ->join('airlines', 'flights.airline_id', '=', 'airlines.id')
         // ->select('flights.*', 'cities.name', 'airlines.name')
         // ->get();
-        $city_from_req = City::find('name', '=', $request->from_city)->get();
-        $city_to_req = City::find('name', '=', $request->to_city)->get();
-        $flights = Flight::find('city_from_id', $city_from_req->id)
-        ->find('city_to_id', $city_to_req->id)->get();
+        $city_from_req = City::where('name', $request->from_city)->get();
+        $city_to_req = City::where('name', $request->to_city)->get();
+        $flights = Flight::where('city_from_id', $city_from_req)
+        ->where('city_to_id', $city_to_req)->get();
         return view('avia_list', ['flights' => $flights]);
     }
 }

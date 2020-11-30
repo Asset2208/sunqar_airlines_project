@@ -28,7 +28,7 @@
         <div class="flight-header">
             <p class="from">
                 <span class="subtitle">Откуда:</span>
-                <span>{{ $flight->city_from_id->name}}</span>
+                <span>{{ $flight->city_from->name}}</span>
             </p>
 
             <p class="to">
