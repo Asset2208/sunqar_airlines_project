@@ -12,6 +12,7 @@ use App\Models\Flight;
 
 class AviaListsController extends Controller
 {
+    public $flights;
     public function index(Request $request){
         // $users = DB::table('users')
         // ->join('contacts', 'users.id', '=', 'contacts.user_id')
@@ -30,16 +31,19 @@ class AviaListsController extends Controller
         // ->where('city_to_id', $city_to_req)->get();
         $city = City::where('name', $request->to_city)->first();
         $flights = DB::table('flights')
-        ->join('cities', 'flights.city_from_id', '=', 'cities.id')
-        ->where('cities.name', $request->from_city)
+        ->join('cities AS cities_one', 'flights.city_from_id', '=', 'cities_one.id')
+        ->join('cities AS cities_two', 'flights.city_to_id', '=', 'cities_two.id')
+        ->join('airlines', 'flights.airline_id', '=', 'airlines.id')
+        ->where('cities_one.name', $request->from_city)
         ->where('flights.flight_date', '>=', $request->date_to)
         ->where('flights.city_to_id', $city->id)
         ->get();
 
+        $this->flights = $flights;
         
         // $flights = Flight::where('id', $cities->id)->get();
 
 
-        return ($flights);
+        return view('avia_list', ['flights'=>$this->flights]);
     }
 }
