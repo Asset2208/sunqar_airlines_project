@@ -98,7 +98,7 @@ class Cities extends Component
         ]);
   
         session()->flash('message', 
-            $this->country_id ? 'Город успешно обновлен' : 'Город успешно добавлен.');
+            $this->city_id ? 'Город успешно обновлен' : 'Город успешно добавлен.');
   
         $this->closeModal();
         $this->resetInputFields();

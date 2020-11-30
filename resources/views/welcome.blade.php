@@ -56,7 +56,7 @@
                     <h1>Поиск авиабилетов</h1>
                     <p>Бронируйте билеты быстро и выгодно</p>
                     <p>
-                        <a href="/generate-pdf" style="color: #fffff;">Скачать билет</a>
+                        <a href="/generate-pdf" style="color: #ffffff;">Скачать билет</a>
                     </p>
                 </div>
 
@@ -70,21 +70,21 @@
                 </div>
 
                 <div class="search-ticket">
-                    <form action="">
+                    <form action="/avia-list-filter" method="get" enctype="multipart/form-data">
                         <div class="search-input-item">
-                            <input type="text" placeholder="Откуда">
+                            <input type="text" name="from_city" placeholder="Откуда">
                         </div>
 
                         <div class="search-input-item">
-                            <input type="text" placeholder="Куда">
+                            <input type="text" name="to_city" placeholder="Куда">
                         </div>
 
                         <div class="search-input-item">
-                            <input type="date" placeholder="Туда">
+                            <input type="date" name="date_to" placeholder="Туда">
                         </div>
 
                         <div class="search-input-item">
-                            <input type="date" placeholder="Обратно">
+                            <input type="date" name="date_back" placeholder="Обратно">
                         </div>
 
                         <div class="submit">

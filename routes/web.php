@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AviaListsController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Livewire\Airlines;
@@ -71,6 +72,8 @@ Route::get('/contacts/', function() {
 });
 
 Route::post('/contacts', [ContactsController::class, 'index'])->name('contact.index');
+
+Route::get('/avia-list-filter', [AviaListsController::class, 'index']);
 
 Route::get('/avia/list/', function() {
     return view('avia_list');
