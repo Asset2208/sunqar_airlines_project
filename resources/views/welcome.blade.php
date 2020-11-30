@@ -72,15 +72,15 @@
                 <div class="search-ticket">
                     <form action="/avia-list-filter" method="get" enctype="multipart/form-data">
                         <div class="search-input-item">
-                            <input type="text" name="from_city" placeholder="Откуда">
+                            <input type="text" name="from_city" placeholder="Откуда" required>
                         </div>
 
                         <div class="search-input-item">
-                            <input type="text" name="to_city" placeholder="Куда">
+                            <input type="text" name="to_city" placeholder="Куда" required>
                         </div>
 
                         <div class="search-input-item">
-                            <input type="date" name="date_to" placeholder="Туда">
+                            <input type="date" name="date_to" placeholder="Туда" required>
                         </div>
 
                         <div class="search-input-item">

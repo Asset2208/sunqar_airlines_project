@@ -13,33 +13,29 @@ use App\Models\Flight;
 class AviaListsController extends Controller
 {
     public function index(Request $request){
-        // $users = DB::table('users')
-        // ->join('contacts', 'users.id', '=', 'contacts.user_id')
-        // ->join('orders', 'users.id', '=', 'orders.user_id')
-        // ->select('users.*', 'contacts.phone', 'orders.price')
-        // ->get();
-
-        // $flights = DB::table('flights')
-        // ->join('cities', 'flights.city_from_id', '=', 'cities.id')
-        // ->join('airlines', 'flights.airline_id', '=', 'airlines.id')
-        // ->select('flights.*', 'cities.name', 'airlines.name')
-        // ->get();
-        // $city_from_req = City::where('name', $request->from_city)->get();
-        // $city_to_req = City::where('name', $request->to_city)->get();
-        // $flights = Flight::where('city_from_id', $city_from_req)
-        // ->where('city_to_id', $city_to_req)->get();
-        $city = City::where('name', $request->to_city)->first();
-        $flights = DB::table('flights')
-        ->join('cities', 'flights.city_from_id', '=', 'cities.id')
-        ->where('cities.name', $request->from_city)
-        ->where('flights.flight_date', '>=', $request->date_to)
-        ->where('flights.city_to_id', $city->id)
-        ->get();
-
+        $flights = Flight::whereHas('city_from', function ($query) use($request) {
+            $city_from_req = $request->from_city;
+            return $query->where('name', '=', $city_from_req);
+        })->whereHas('city_to', function ($query) use($request){
+            $city_to_req = $request->to_city;
+            return $query->where('name', '=', $city_to_req);
+        })->with('airline')
+        ->where('flight_date', '=', $request->date_to)->get();
         
-        // $flights = Flight::where('id', $cities->id)->get();
+        if ($request->filled('date_back')) {
+            $flights_back = Flight::whereHas('city_from', function ($query) use($request) {
+                $city_to_req = $request->to_city;
+                return $query->where('name', '=', $city_to_req);
+            })->whereHas('city_to', function ($query) use($request){
+                $city_from_req = $request->from_city; $request->to_city;
+                return $query->where('name', '=', $city_from_req);
+            })->with('airline')
+            ->where('flight_date', '=', $request->date_back)->get();
+
+            return view('avia_list', ['flights'=>$flights, 'flights_back'=>$flights_back]);
+        }
 
 
-        return ($flights);
+        return view('avia_list', ['flights'=>$flights]);
     }
 }
