@@ -31,14 +31,20 @@
             <p>От 5900тг</p>
         </div>
         <div class="flight-detail">
-            <a onclick="document.getElementById('myform').submit();">Купить</a>
+            <form id="myform" method="get" action="/buy_ticket">
+                <select name="class" id="" required>
+                    @foreach ($classseats as $class)
+                        <option value={{ $class->id }}>{{ $class->name }}</option>
+                    @endforeach
+                </select>
+                <input type="hidden" name="flight_id" value="{{ $flight->id }}">
+                <input type="number" name="baggage" min="1" max="5" required>
+                <button type="submit">Купить</button>
+            </form>
         </div>
         <div class="flight-info">
             <img src="{{ $flight->airline->airline_photo }}" alt="" width="100px">
         </div>
-        <form id="myform" method="post" action="/buy_ticket">
-            <input type="hidden" name="flight_id" value="{{ $flight->id }}">
-        </form>
     </div> 
     @endforeach
     

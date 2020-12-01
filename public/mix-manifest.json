@@ -9,5 +9,7 @@
     "/css/dashboard.css": "/css/dashboard.css",
     "/css/information.css": "/css/information.css",
     "/css/sign_in.css": "/css/sign_in.css",
+    "/css/pdf_ticket.css": "/css/pdf_ticket.css",
+    "/css/user_tickets.css": "/css/user_tickets.css",
     "/css/app.css": "/css/app.css"
 }

@@ -21,6 +21,8 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/dashboard.scss', 'public/css')
     .sass('resources/sass/information.scss', 'public/css')
     .sass('resources/sass/sign_in.scss', 'public/css')
+    .sass('resources/sass/pdf_ticket.scss', 'public/css')
+    .sass('resources/sass/user_tickets.scss', 'public/css')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),

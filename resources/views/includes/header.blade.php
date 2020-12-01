@@ -5,6 +5,7 @@
         <a href="/information">Информация</a>
         <a href="/about">О нас</a>
         <a href="/contacts">Контакты</a>
+        <a href="/user/tickets">Мои билеты</a>
     </div>
 
     @auth

@@ -34,7 +34,7 @@
                         <td class="border px-4 py-2">{{ $airline->id }}</td>
                         <td class="border px-4 py-2">{{ $airline->name }}</td>
                         <td class="border px-4 py-2" style="display:flex; justify-content: center;">
-                            <img src="{{ $airline->airline_photo }}" alt="{{ $airline->name }}" width="175px">
+                            <img src="{{ $airline->airline_photo }}" alt="{{ $airline->name }}" width="125px">
                         </td>
                         <td class="border px-4 py-2">
                         <button wire:click="edit({{ $airline->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Редактировать</button>

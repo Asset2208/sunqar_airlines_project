@@ -8,11 +8,14 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Team;
 use App\Models\Airline;
 use App\Models\City;
+use App\Models\ClassSeat;
 use App\Models\Flight;
 
 class AviaListsController extends Controller
 {
     public $flights;
+    public $classes;
+
     public function index(Request $request){
         $flights = Flight::whereHas('city_from', function ($query) use($request) {
             $city_from_req = $request->from_city;
@@ -36,7 +39,9 @@ class AviaListsController extends Controller
             return view('avia_list', ['flights'=>$flights, 'flights_back'=>$flights_back]);
         }
 
+        $this->classes = ClassSeat::all();
 
-        return view('avia_list', ['flights'=>$flights]);
+
+        return view('avia_list', ['flights'=>$flights, 'classseats'=>$this->classes]);
     }
 }

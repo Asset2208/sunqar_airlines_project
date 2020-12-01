@@ -1,7 +1,9 @@
 <?php
   
 namespace App\Http\Controllers;
-  
+
+use App\Models\Ticket;
+use BaconQrCode\Encoder\QrCode;
 use Illuminate\Http\Request;
 use PDF;
   
@@ -12,14 +14,16 @@ class PDFController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function generatePDF()
+    public function generatePDF(Request $request)
     {
-        
+        $ticket = Ticket::findOrFail($request->ticket_id);
         $data = [
-            'title' => 'Sunqar avialines',
-            'date' => date('m/d/Y')
+            'title' => 'SUNQAR AVIALINES',
+            'date' => date('m/d/Y'),
+            'ticket' => $ticket
         ];
-          
+
+
         $pdf = PDF::loadView('pdf', $data);
     
         return $pdf->download('sunqar_avialines_checklist.pdf');
