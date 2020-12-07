@@ -40,6 +40,18 @@
             <span>Время: </span>
             {{ $ticket->flight->flight_time }}
         </p>
+        <p class="card-text">
+            <span>Имя: {{ $ticket->passenger_name }} {{ $ticket->passenger_suname }}</span>
+        </p>
+        <p class="card-text">
+            <span>ИИН: {{ $ticket->passenger_iin }}</span>
+        </p>
+        <p class="card-text">
+            <span>Номер паспорта: {{ $ticket->passenger_passport }}</span>
+        </p>
+        <p class="card-text">
+            <span>Гражданство: {{ $ticket->passenger_country }}</span>
+        </p>
         <hr>
         <p>Уважаемый пассажир,</p>
         <p>

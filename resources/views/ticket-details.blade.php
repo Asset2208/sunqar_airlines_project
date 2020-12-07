@@ -112,7 +112,7 @@
           <div class="col-md-5 mb-3">
             <label for="country">Гражданство</label>
             <select class="custom-select d-block w-100" id="country" required="required" name="country">
-              <option value="">Choose...</option>
+              <option value="">Выбрать</option>
               <option value="KAZ">Казахстан</option>
               <option value="RUS">Россия</option>
               <option value="UZB">Узбекистан</option>
@@ -143,7 +143,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="cc-name">Name on card</label>
+            <label for="cc-name">Номер</label>
             <input type="text" class="form-control" id="cc-name" placeholder="" required="required">
             <small class="text-muted">Full name as displayed on card</small>
             <div class="invalid-feedback">
@@ -151,7 +151,7 @@
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="cc-number">Credit card number</label>
+            <label for="cc-number">Номер кредитной карты</label>
             <input type="text" class="form-control" id="cc-number" placeholder="" required="required">
             <div class="invalid-feedback">
               Credit card number is required
@@ -160,7 +160,7 @@
         </div>
         <div class="row">
           <div class="col-md-3 mb-3">
-            <label for="cc-expiration">Expiration</label>
+            <label for="cc-expiration">ММ/ГГ</label>
             <input type="text" class="form-control" id="cc-expiration" placeholder="" required="required">
             <div class="invalid-feedback">
               Expiration date required
@@ -175,7 +175,7 @@
           </div>
         </div>
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Оплатить</button>
       </form>
     </div>
   </div>
