@@ -6,6 +6,7 @@ use App\Http\Controllers\BuyTicket;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\UserTickets;
+use App\Http\Controllers\TicketDetails;
 use App\Http\Livewire\Airlines;
 use App\Http\Livewire\Airports;
 use App\Http\Livewire\Cities;
@@ -109,5 +110,7 @@ Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 
 
 Route::get('/user/tickets', [UserTickets::class, 'index']);
+
+Route::get('/ticket-details', [TicketDetails::class, 'index']);
 
 // Route::get('/admin', [AdminController::class, 'index'])->name('madiyar.index');

@@ -25,7 +25,9 @@ class AviaListsController extends Controller
             return $query->where('name', '=', $city_to_req);
         })->with('airline')
         ->where('flight_date', '=', $request->date_to)->get();
-        
+
+        $this->classes = ClassSeat::all();
+
         if ($request->filled('date_back')) {
             $flights_back = Flight::whereHas('city_from', function ($query) use($request) {
                 $city_to_req = $request->to_city;
@@ -36,10 +38,10 @@ class AviaListsController extends Controller
             })->with('airline')
             ->where('flight_date', '=', $request->date_back)->get();
 
-            return view('avia_list', ['flights'=>$flights, 'flights_back'=>$flights_back]);
+            return view('avia_list', ['flights'=>$flights, 'flights_back'=>$flights_back, 'classseats'=>$this->classes]);
         }
 
-        $this->classes = ClassSeat::all();
+        
 
 
         return view('avia_list', ['flights'=>$flights, 'classseats'=>$this->classes]);
