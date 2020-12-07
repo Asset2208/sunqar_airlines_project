@@ -68,7 +68,11 @@
     </div> 
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Данные пассажира</h4>
-      <form class="needs-validation" method="post">
+      <form class="needs-validation" method="post" action="/buy_ticket">
+      {{csrf_field()}}
+      <input type="hidden" name="baggage" value="{{ $baggage }}">
+      <input type="hidden" name="flight_id" value="{{ $flight->id}}">
+      <input type="hidden" name="class" value="{{ $classseat->id }}">
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Имя</label>
@@ -109,9 +113,9 @@
             <label for="country">Гражданство</label>
             <select class="custom-select d-block w-100" id="country" required="required" name="country">
               <option value="">Choose...</option>
-              <option>Казахстан</option>
-              <option>Россия</option>
-              <option>Узбекистан</option>
+              <option value="KAZ">Казахстан</option>
+              <option value="RUS">Россия</option>
+              <option value="UZB">Узбекистан</option>
             </select>
             <div class="invalid-feedback">
               Please select a valid country.

@@ -104,7 +104,7 @@ Route::get('/admin/flight', Flights::class);
 
 Route::get('/admin/airports', Airports::class);
 
-Route::get('/buy_ticket', [BuyTicket::class, 'index']);
+Route::post('/buy_ticket', [BuyTicket::class, 'index'])->name('buy_ticket.index');
 
 Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 
