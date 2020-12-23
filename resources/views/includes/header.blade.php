@@ -6,6 +6,7 @@
         <a href="/about">О нас</a>
         <a href="/contacts">Контакты</a>
         <a href="/user/tickets">Мои билеты</a>
+        <a href="/live">LIVE</a>
     </div>
 
     @auth

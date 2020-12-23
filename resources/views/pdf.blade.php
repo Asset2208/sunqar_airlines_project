@@ -16,7 +16,7 @@
     <hr>
     <h2 style="text-align: center">Спасибо за покупку</h2>
     <p style="text-align: center">
-        <img src="https://chabadpbrome.com/wp-content/uploads/events-manager/success-icon-23192.png" alt="" width="100px">
+        
     </p>
     <div class="card my-2">
         <div class="card-header">
@@ -25,11 +25,9 @@
         {!! QrCode::size(250)->generate('www.google.com'); !!} 
         <h5 class="card-title">
             Откуда: 
-            <img src={{ $ticket->flight->city_from->country->cimg }} alt="" width="40px">
             {{ $ticket->flight->city_from->name }} →
 
              Куда: 
-            <img src={{ $ticket->flight->city_to->country->cimg }} alt="" width="40px">
             {{ $ticket->flight->city_to->name }}
         </h5>
         <p class="card-text">

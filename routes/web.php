@@ -113,4 +113,8 @@ Route::get('/user/tickets', [UserTickets::class, 'index']);
 
 Route::get('/ticket-details', [TicketDetails::class, 'index']);
 
+Route::get('/live', function() {
+    return view('flightradar');
+});
+
 // Route::get('/admin', [AdminController::class, 'index'])->name('madiyar.index');
