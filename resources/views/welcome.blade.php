@@ -37,6 +37,7 @@
                 <a href="/about">О нас</a>
                 <a href="/contacts">Контакты</a>
                 <a href="/user/tickets">Мои билеты</a>
+                <a href="/live">LIVE</a>
             </div>
             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Профиль</a>
             @else

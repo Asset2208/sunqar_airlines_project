@@ -11,5 +11,6 @@
     "/css/sign_in.css": "/css/sign_in.css",
     "/css/pdf_ticket.css": "/css/pdf_ticket.css",
     "/css/user_tickets.css": "/css/user_tickets.css",
+    "/css/ticket_detail.css": "/css/ticket_detail.css",
     "/css/app.css": "/css/app.css"
 }

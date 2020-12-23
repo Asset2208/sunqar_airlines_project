@@ -15,6 +15,16 @@
                   </div>
                 </div>
             @endif
+            <div style="display: flex">
+                <a href="/admin/country" style="margin: 0 5px;">Страны</a>
+                <a href="/admin/airports" style="margin: 0 5px">Аэропорты</a>
+                <a href="/admin/cities" style="margin: 0 5px">Города</a>
+                <a href="/admin/post" style="margin: 0 5px">Посты</a>
+                <a href="/admin/airline" style="margin: 0 5px; color: blue;">Авиалинии</a>
+                <a href="/admin/flight" style="margin: 0 5px; ">Авиаперелеты</a>
+                <a href="/admin/ticket" style="margin: 0 5px">Купленные билеты</a>
+                <a href="/admin/class-seats" style="margin: 0 5px;">Виды классов</a>
+            </div>
             <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Добавить страну</button>
             @if($isOpen)
                 @include('livewire.create_airline')

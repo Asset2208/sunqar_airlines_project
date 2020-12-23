@@ -25,10 +25,19 @@
         body.simple a.site-brand {
             display: none !important;
         }
+
+        a {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <div id="map">
+        <a href="/">Главная</a>
         @yield('radar')
         
     </div>
