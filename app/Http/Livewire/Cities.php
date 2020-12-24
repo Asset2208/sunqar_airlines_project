@@ -85,11 +85,6 @@ class Cities extends Component
      */
     public function store()
     {
-        // $this->validate([
-        //     'name' => 'required',
-        //     'short_code' => 'required',
-        //     'country_id' => 'required',
-        // ]);
    
         City::updateOrCreate(['id' => $this->city_id], [
             'country_id' => $this->country_id,
