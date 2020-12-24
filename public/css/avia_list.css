@@ -52,6 +52,18 @@
   font-family: "Jost", sans-serif;
 }
 
+.avia-list-result .wheather-wrapper {
+  margin: 10px 0;
+  border: 1px solid #eeeeee;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.avia-list-result .wheather-wrapper h2 {
+  font-size: 25px;
+}
+
 .avia-list-result p,
 .avia-list-result span {
   font-family: "Jost", sans-serif;

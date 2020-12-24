@@ -54,6 +54,19 @@
     margin: 0 auto;
     font-family: 'Jost', sans-serif;
 
+
+    .wheather-wrapper {
+        margin: 10px 0;
+        border: 1px solid #eeeeee;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 25px;
+        }
+    }
+
      p, span {
         font-family: 'Jost', sans-serif;
      }

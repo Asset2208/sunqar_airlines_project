@@ -10,8 +10,16 @@
 
 @section('content')
 <section class="avia-list-result" style="margin-top: 100px;">
-    <div id="weatherFrom"></div>
-    <div id="weatherTo"></div>
+    <div class="wheather-wrapper">
+        <div>
+            <h2>Откуда</h2>
+            <div id="weatherFrom"></div>
+        </div>
+        <div>
+            <h2>Куда</h2>
+            <div id="weatherTo"></div>
+        </div>
+    </div>
     @foreach($flights as $flight)
     <div class="flight" style="background: url('img/avia_list/avia-bg.jpg');" >
         <div class="flight-header">

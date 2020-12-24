@@ -8,6 +8,7 @@
         <a href="/user/tickets">Мои билеты</a>
         <a href="/live">LIVE</a>
         <a href="/news">Новости</a>
+        <a href="/weather">Погода</a>
     </div>
 
     @auth
