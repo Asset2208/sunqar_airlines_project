@@ -78,7 +78,7 @@
                         </div>
 
                         <div class="search-input-item">
-                            <input type="date" name="date_to" placeholder="Туда" required>
+                            <input id="date_to" onchange="TDate()" type="date" name="date_to" placeholder="Туда" required>
                         </div>
 
                         <div class="search-input-item">
@@ -90,6 +90,20 @@
                         </div>
 
                     </form>
+                    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                    <script>
+                        function TDate() {
+                            let UserDate = document.getElementById("date_to").value;
+                            let ToDate = new Date();
+        
+                            if (new Date(UserDate).getTime() <= ToDate.getTime()) {
+                                swal("Дата должна быть не позднее сегодняшнего!");
+                                document.getElementById("date_to").value = new Date(UserDate).getTime();
+                                return false;
+                            }
+                            return true;
+                        }
+                    </script>
                 </div>
             </div>
         </div>

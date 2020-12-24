@@ -10,6 +10,7 @@ use App\Models\Airline;
 use App\Models\City;
 use App\Models\ClassSeat;
 use App\Models\Flight;
+use DateTime;
 
 class AviaListsController extends Controller
 {
@@ -17,6 +18,11 @@ class AviaListsController extends Controller
     public $classes;
 
     public function index(Request $request){
+
+        $date_now = new DateTime();
+
+
+
         $flights = Flight::whereHas('city_from', function ($query) use($request) {
             $city_from_req = $request->from_city;
             return $query->where('name', '=', $city_from_req);
