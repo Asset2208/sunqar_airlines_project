@@ -10,7 +10,7 @@
     
     @yield('styles')
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-    <title>Document</title>
+    <title>SUNQAR AVIALINES</title>
 </head>
 <body @yield('body_style')>
     @include('includes.header')

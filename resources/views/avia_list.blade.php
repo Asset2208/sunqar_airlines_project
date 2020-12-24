@@ -38,7 +38,7 @@
                     @endforeach
                 </select>
                 <input type="hidden" name="flight_id" value="{{ $flight->id }}">
-                <input type="number" name="baggage" min="1" max="5" required>
+                <input type="number" placeholder="Кол-во багажа" name="baggage" min="1" max="5" required>
                 <button type="submit">Купить</button>
             </form>
         </div>
@@ -50,7 +50,7 @@
     
     @if (isset($flights_back))
         <hr>
-        <h1>Назад</h1>
+        <h2 class="back">Назад</h2>
         @foreach($flights_back as $flight)
         <div class="flight" style="background: url('img/avia_list/avia-bg.jpg');" >
             <div class="flight-header">

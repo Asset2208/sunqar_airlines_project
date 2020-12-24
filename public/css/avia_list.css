@@ -80,7 +80,7 @@
 .avia-list-result .flight-header p {
   font-size: 25px;
   color: #ffffff;
-  border-bottom: 1px solid #000000;
+  border-bottom: 3px solid #d35454;
   padding: 5px;
 }
 
@@ -102,16 +102,33 @@
   margin-top: 20px;
   padding: 5px 20px;
   border-radius: 4px;
-  background: #ffffff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   color: #000000;
 }
 
-.avia-list-result .flight-detail:hover {
-  transition: 0.3s;
-  background: #285e28;
-  color: #ffffff;
+.avia-list-result .flight-detail select,
+.avia-list-result .flight-detail input,
+.avia-list-result .flight-detail button {
+  margin: 0 5px;
+  padding: 3px 5px;
+  background: #ffffff;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+}
+
+.avia-list-result .flight-detail input {
+  width: 100px;
+}
+
+.avia-list-result .flight-detail button {
+  cursor: pointer;
+}
+
+.back {
+  font-size: 25px;
+  font-family: "Jost", sans-serif;
 }
 

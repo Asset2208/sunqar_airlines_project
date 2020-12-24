@@ -80,7 +80,7 @@
              p {
                  font-size: 25px;
                  color: #ffffff ;
-                 border-bottom: 1px solid #000000;
+                 border-bottom: 3px solid #d35454;
 
                  padding: 5px;
              }
@@ -103,16 +103,33 @@
              margin-top: 20px;
              padding: 5px 20px;
              border-radius: 4px;
-             background: #ffffff;
              width: max-content;
              color: #000000;
-             &:hover {
-                 transition: .3s;
-                 background: rgb(40, 94, 40);
-                 color: #ffffff;
+
+             select,input,button {
+                 margin: 0 5px;
+                 padding: 3px 5px;
+                 background: #ffffff;
+                 border: none;
+                 border-radius: 7px;
+                 outline: none;
              }
+
+             input {
+                 width: 100px;
+             }
+
+             button {
+                 cursor: pointer;
+             }
+
          }
 
          
      }
+}
+
+.back {
+    font-size: 25px;
+    font-family: 'Jost', sans-serif;
 }
