@@ -117,6 +117,9 @@ Route::get('/live', function() {
     return view('flightradar');
 });
 
+Route::get('/weather', function() {
+    return view('weathermap');
+});
 
 Route::resource('/news', 'App\Http\Controllers\NewsController');
 
