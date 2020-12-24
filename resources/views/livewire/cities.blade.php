@@ -24,6 +24,7 @@
                 <a href="/admin/flight" style="margin: 0 5px; ">Авиаперелеты</a>
                 <a href="/admin/ticket" style="margin: 0 5px; ">Купленные билеты</a>
                 <a href="/admin/class-seats" style="margin: 0 5px;">Виды классов</a>
+                <a href="/admin/contact-request" style="margin: 0 5px;">Вопросы/Благодарности</a>
             </div>
             <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Добавить город</button>
             @if($isOpen)

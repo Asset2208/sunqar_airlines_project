@@ -114,6 +114,16 @@
           </div>
         </div>
       </div>
+      <div class="col-6 mt-3">
+        <div class="card">
+          <div class="card-header">
+            Вопросы от пользователей
+          </div>
+          <div class="card-body">
+            <a href="/admin/contact-request" class="btn btn-primary">Смотреть</a>
+          </div>
+        </div>
+      </div>
     </div>
 </main>
     

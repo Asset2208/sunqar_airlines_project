@@ -7,6 +7,7 @@
         <a href="/contacts">Контакты</a>
         <a href="/user/tickets">Мои билеты</a>
         <a href="/live">LIVE</a>
+        <a href="/news">Новости</a>
     </div>
 
     @auth

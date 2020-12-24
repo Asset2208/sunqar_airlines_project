@@ -38,6 +38,7 @@
                 <a href="/contacts">Контакты</a>
                 <a href="/user/tickets">Мои билеты</a>
                 <a href="/live">LIVE</a>
+                <a href="/news">Новости</a>
             </div>
             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Профиль</a>
             @else

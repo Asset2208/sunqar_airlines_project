@@ -92,7 +92,7 @@ Route::get('admin/post', Posts::class);
 
 Route::get('admin/country', Countries::class);
 
-Route::get('contact-request', Contacts::class);
+Route::get('/admin/contact-request', Contacts::class);
 
 Route::get('/admin/cities', Cities::class);
 
@@ -116,5 +116,8 @@ Route::get('/ticket-details', [TicketDetails::class, 'index']);
 Route::get('/live', function() {
     return view('flightradar');
 });
+
+
+Route::resource('/news', 'App\Http\Controllers\NewsController');
 
 // Route::get('/admin', [AdminController::class, 'index'])->name('madiyar.index');
