@@ -56,9 +56,13 @@
 
         <div class="full-bg">
             <div class="container">
+                <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+              />
                 <div class="header-text">
-                    <h1>Поиск авиабилетов</h1>
-                    <p>Бронируйте билеты быстро и выгодно</p>
+                    <h1 class="animate__animated animate__bounce">Поиск авиабилетов</h1>
+                    <p class="animate__animated animate__fadeIn">Бронируйте билеты быстро и выгодно</p>
                 </div>
 
                 <div class="switch-tabs">
@@ -118,59 +122,59 @@
                         <div class="flights-item">
                             <a href="#">
                                 <span>Алматы → Талдыкорган</span>
-                                <span class="price">от 3900тг</span>
+                                <span class="price">от 3500тг</span>
                             </a>
                         </div>
                         <div class="flights-item">
                             <a href="#">
-                                <span>Алматы → Нур-Султан</span>
-                                <span class="price">от 6900тг</span>
+                                <span>Алматы → Семей</span>
+                                <span class="price">от 5800тг</span>
                             </a>
                         </div>
                         <div class="flights-item">
                             <a href="#">
-                                <span>Алматы → Талдыкорган</span>
-                                <span class="price">от 3900тг</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="flights-item">
-                            <a href="#">
-                                <span>Алматы → Талдыкорган</span>
-                                <span class="price">от 3900тг</span>
-                            </a>
-                        </div>
-                        <div class="flights-item">
-                            <a href="#">
-                                <span>Алматы → Талдыкорган</span>
-                                <span class="price">от 3900тг</span>
-                            </a>
-                        </div>
-                        <div class="flights-item">
-                            <a href="#">
-                                <span>Алматы → Талдыкорган</span>
-                                <span class="price">от 3900тг</span>
+                                <span>Тараз → Шымкент</span>
+                                <span class="price">от 4900тг</span>
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="flights-item">
                             <a href="#">
-                                <span>Алматы → Талдыкорган</span>
-                                <span class="price">от 3900тг</span>
+                                <span>Актау → Алматы</span>
+                                <span class="price">от 16000тг</span>
                             </a>
                         </div>
                         <div class="flights-item">
                             <a href="#">
-                                <span>Алматы → Талдыкорган</span>
-                                <span class="price">от 3900тг</span>
+                                <span>Семей → Орал</span>
+                                <span class="price">от 14000тг</span>
                             </a>
                         </div>
                         <div class="flights-item">
                             <a href="#">
-                                <span>Алматы → Талдыкорган</span>
-                                <span class="price">от 3900тг</span>
+                                <span>Шымкент → Нур-Султан</span>
+                                <span class="price">от 6000тг</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="flights-item">
+                            <a href="#">
+                                <span>Алматы → Туркестан</span>
+                                <span class="price">от 7800тг</span>
+                            </a>
+                        </div>
+                        <div class="flights-item">
+                            <a href="#">
+                                <span>Кокшетау → Семей</span>
+                                <span class="price">от 8500тг</span>
+                            </a>
+                        </div>
+                        <div class="flights-item">
+                            <a href="#">
+                                <span>Актобе → Алматы</span>
+                                <span class="price">от 12800тг</span>
                             </a>
                         </div>
                     </div>
@@ -198,15 +202,13 @@
                         </p>
                     </div>
                     <div class="col-md-5">
-                        <p class="header-text">Авиабилеты</p>
-                        <p>У нас вы можете купить билеты на самолет дешево, быстро и легко! Мы предлагаем выгодные цены как
-                            на внутренние, так и на международные рейсы.</p>
+                        <p class="header-text">Прямой рейс</p>
+                        <p>Не тратьте своё время, купите билет от пунка А до пункта Б прямым путём</p>
                     </div>
                     <div class="col-md-5">
-                        <p class="header-text">Ж/Д билеты</p>
+                        <p class="header-text">Бизнес класс</p>
                         <p>
-                            Благодаря удобному интерфейсу и быстрому поиску у нас можно купить дешевые билеты на поезд, без
-                            очередей и временных затрат.
+                            Бизнес-класс «Sunqr avialines» – гарантия идеального перелета ... некоторые из привилегий полета в бизнес-классе 
                         </p>
                     </div>
 
