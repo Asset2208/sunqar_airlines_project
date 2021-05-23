@@ -23,13 +23,13 @@
             Номер билета №: {{ $ticket->id }}
         </div>
         {!! QrCode::size(250)->generate('www.google.com'); !!} 
-        <h5 class="card-title">
+        <h5 class="card-title" style="text-align: center; font-size: 20px">
             Откуда: 
             {{ $ticket->flight->city_from->name }} →
 
              Куда: 
             {{ $ticket->flight->city_to->name }}
-        </h5>
+        </h5>   
         <p class="card-text">
             <span>Дата: </span>
             {{ $ticket->flight->flight_date }}

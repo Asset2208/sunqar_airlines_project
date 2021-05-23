@@ -1,3 +1,9 @@
+<style>
+    .footer {
+        background: rgb(48, 48, 48)
+    }
+</style>
+
 <footer class="footer">
     <div class="footer-left">
         <ul>
